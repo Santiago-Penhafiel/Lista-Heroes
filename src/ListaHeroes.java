@@ -82,7 +82,7 @@ public class ListaHeroes {
         }
         for(Heroe heroe : lista){
             double pagoNeto = heroe.getPagoMensual()*12 - heroe.getAporteFondo()*12 - heroe.getImpuestoGobierno();
-            Object[] fila = {heroe.getId(), heroe.getSuperpoder(), heroe.getPagoMensual(), heroe.getAporteFondo(), heroe.getImpuestoGobierno(), pagoNeto};
+            Object[] fila = {heroe.getNombre(), heroe.getSuperpoder(), heroe.getPagoMensual(), heroe.getAporteFondo(), heroe.getImpuestoGobierno(), pagoNeto};
             informe.getModel().addRow(fila);
         }
         informe.getTabla().setModel(informe.getModel());
